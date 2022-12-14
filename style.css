@@ -1,0 +1,105 @@
+body{
+    background-image: url(kepek/hatter.jpg);
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main{
+    margin: 0;
+    background-color: white;
+    max-width: 800px;
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-areas: "h h h"
+                         "n a as"
+                         "f f f";
+}
+header{
+    background-image: url(kepek/fejlec.jpg);
+    height: 150px;
+    text-align: center;
+    color: white;
+    grid-area: h;
+}
+header h1{
+    padding-top: 70px;
+}
+
+nav{
+    grid-area: n;
+}
+nav ul{
+    list-style-type: none;
+    padding: 0%;
+}
+nav ul li{
+    background-color: rgb(0, 81, 255);
+    border-radius: 30px;
+    padding: 10px;
+    margin: 3px;
+    text-align: center;
+    color: white;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+article{
+    padding: 5px;
+    grid-area: a;
+}
+aside{
+    grid-area: as;
+    border-left: 1px solid grey;
+    padding-left: 40px;
+}
+footer{
+    grid-area: f;
+    background-color: rgb(0, 81, 255);
+    height: 40px;
+    text-align: center;
+
+}
+table th, td{
+    border-bottom: 1px solid blue;
+}
+tr:nth-child(odd){
+    background-color: lightskyblue;
+}
+table{
+    border-collapse: collapse;
+}
+@media screen and (max-width: 700px ) {
+    main{
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "h h "
+                             "n n "
+                             "a as"
+                             "f f ";
+    }
+    nav ul li{
+        display: inline;
+    }
+    }
+   
+@media screen and (max-width: 500px ) {
+        main{
+            width: 100%;
+            grid-template-columns: 1fr;
+            grid-template-areas: "h"
+                                 "n"
+                                 "a"
+                                 "as"
+                                 "f";
+        }
+        nav ul li{
+            display: block;
+        }
+}
+    
+
+
